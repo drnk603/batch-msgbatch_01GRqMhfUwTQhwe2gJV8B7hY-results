@@ -447,9 +447,7 @@ video {
   background-color: var(--color-neutral-200);
 }
 
-.bg-dark {
-  background-color: var(--color-dark);
-}
+
 
 .bg-primary {
   background-color: var(--color-primary);
@@ -1536,5 +1534,27 @@ address {
 @media (min-width: 1024px) {
   .row {
     --bs-gutter-x: var(--space-2xl);
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }
